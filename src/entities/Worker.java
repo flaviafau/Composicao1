@@ -12,17 +12,17 @@ public class Worker {
 	private Double baseSalary;
 	
 	private Department department;
-	private List<HourContract> contracts = new ArrayList<>();
+	private List<HourContract> contracts = new ArrayList<>();// não pode colocar no construtor
 	
 	public Worker() {
 	}
 
-	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
+	public Worker(String name, WorkerLevel level, Double baseSalary, Department department){
 		this.name = name;
 		this.level = level;
 		this.baseSalary = baseSalary;
 		this.department = department;
-	}
+	} //não coloca a lista
 
 	public String getName() {
 		return name;
@@ -58,7 +58,7 @@ public class Worker {
 
 	public List<HourContract> getContracts() {
 		return contracts;
-	}
+	}///contracts não pode ter set
 
 	public void addContract(HourContract contract) {
 		contracts.add(contract);
